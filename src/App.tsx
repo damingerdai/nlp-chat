@@ -1,9 +1,10 @@
-import { Button } from '@chakra-ui/react'
+import Navbar from './components/Navbar';
 import './App.scss';
+
 
 function App() {
   return (
-    <Button colorScheme='blue' >Button</Button>
+    <Navbar></Navbar>
   );
 }
 
