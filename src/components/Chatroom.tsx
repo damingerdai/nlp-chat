@@ -4,7 +4,6 @@ import { Nlp } from '@nlpjs/nlp';
 import { LangEn } from '@nlpjs/lang-en-min';
 import { fs } from '@nlpjs/request-rn';
 
-
 import React, { useState } from 'react';
 import SendMessage from './SendMessage';
 import ShowMessages from './ShowMessages';
