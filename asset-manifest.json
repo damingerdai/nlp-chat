@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nlp-chat/static/css/main.93a0497a.css",
+    "main.js": "/nlp-chat/static/js/main.79a701c3.js",
+    "static/js/787.4550e6e7.chunk.js": "/nlp-chat/static/js/787.4550e6e7.chunk.js",
+    "index.html": "/nlp-chat/index.html",
+    "main.93a0497a.css.map": "/nlp-chat/static/css/main.93a0497a.css.map",
+    "main.79a701c3.js.map": "/nlp-chat/static/js/main.79a701c3.js.map",
+    "787.4550e6e7.chunk.js.map": "/nlp-chat/static/js/787.4550e6e7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93a0497a.css",
+    "static/js/main.79a701c3.js"
+  ]
+}
