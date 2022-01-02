@@ -5,15 +5,16 @@ import { LangEn } from '@nlpjs/lang-en-min';
 import { fs } from '@nlpjs/request-rn';
 
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import SendMessage from './SendMessage';
 import ShowMessages from './ShowMessages';
 import * as corpus from '../assets/corpus-en.json';
+import { Messages } from '../models/message';
 
 const Chatroom = () => {
 
     let nlp: any;
-    const [messages, setMessages] = useState<string[]>([]);
+    const [messages, setMessages] = useState<Messages>([]);
 
     async function init() {
         const container = await containerBootstrap();
@@ -31,12 +32,22 @@ const Chatroom = () => {
     return (<React.Fragment>
         <Container padding="16px 0">
             <ShowMessages messages={messages} />
-            <SendMessage sendMessage={async (message) => {
+            <SendMessage sendMessage={async (text) => {
                 if (!nlp) {
                     await init();
                 }
-                const response = await nlp.process('en', message);
-                setMessages([...messages, message, response.answer])
+                const response = await nlp.process('en', text);
+                const message = [
+                    {
+                        text,
+                        owner: 'user'
+                    },
+                    {
+                        text: response.answer,
+                        owner: 'bot'
+                    }
+                ] as Messages;
+                setMessages([...messages, ...message]);
             }} />
         </Container>
     </React.Fragment>)
