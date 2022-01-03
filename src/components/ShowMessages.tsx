@@ -1,4 +1,4 @@
-import { Box, VStack } from '@chakra-ui/react';
+import { Box, VStack, Text } from '@chakra-ui/react';
 import React from 'react';
 import { Messages } from '../models/message';
 
@@ -13,13 +13,11 @@ const ShowMessages: React.FC<ShowMessagesProps> = ({ messages }: ShowMessagesPro
             {messages.map((message, i) => {
                 return <Box 
                 padding="0 8px" 
-                minH="48px" 
-                bg={message.owner === 'user' ? 'gray.500' : 'teal.200'}
-                fontSize="24px" 
+                minH="36px" 
                 color="white"
                 textAlign={message.owner === 'user' ? 'right' : 'left'}
                 key={i}>
-                    {message.text}
+                    <Text m="0 -8px" p="8px" fontSize="24px"  bg={message.owner === 'user' ? 'gray.500' : 'teal.200'}>{message.text}</Text>
                 </Box>
             })}
         </VStack>
