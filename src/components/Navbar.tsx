@@ -1,9 +1,10 @@
-import { Box, Flex, Spacer, Link } from '@chakra-ui/react';
+import { Box, Flex, Spacer, Link, useColorMode } from '@chakra-ui/react';
 import ThemePicker from './ThemePicker';
 
 const Navbar = () => {
-
-    return (<Flex h="48px" p="8px 16px" bg="teal.300" color="white">
+    const { colorMode } = useColorMode();
+    
+    return (<Flex h="48px" p="8px 16px" bg={ colorMode === 'light' ? 'teal.300' : 'teal.700'} color={ colorMode === 'light' ? 'white' : 'gray.900'}>
         <Box>
             Nlp Chat
         </Box>
