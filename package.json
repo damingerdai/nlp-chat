@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
-  "homepage": "https:/damingerdai.github.io/nlp-chat",
+  "homepage": "https://damingerdai.github.io/nlp-chat/",
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
